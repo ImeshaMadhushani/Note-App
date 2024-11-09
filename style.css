@@ -1,66 +1,147 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
 
-.container{
+body,
+html {
     width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(135deg,#cf9aff,#95c0ff);
-    color: #fff;
-    padding-top: 4%;
-    padding-left: 10%;
-}
-
-.container h1{
+    height: 100%;
     display: flex;
     align-items: center;
-    font-size: 35px;
+    justify-content: center;
+    background: linear-gradient(135deg, #cf9aff, #95c0ff);
+    color: #333;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.container h1 {
+    font-size: 2.2rem;
     font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-.container h1 img{
-    width: 60px;
+.container h1 img {
+    width: 50px;
+    vertical-align: middle;
+    margin-right: 10px;
 }
 
-.container button img{
-    width: 25px;
+.container button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #9418fd, #571094);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.container button:hover {
+    background: linear-gradient(135deg, #7d12d1, #451075);
+    transform: scale(1.05);
+}
+
+.container button img {
+    width: 20px;
     margin-right: 8px;
 }
 
-.container button{
-    display: flex;
-    align-items: center;
-    background: linear-gradient(#9418fd,#571094);
-    color: #fff;
-    font-size: 16px;
-    outline: 0;
-    border: 0;
-    border-radius: 40px;
-    padding: 15px 25px;
-    margin: 30px 0 20px;
-    cursor: pointer;
-}
-
-.input-box{
+.input-box {
     position: relative;
     width: 100%;
     max-width: 500px;
-    min-height: 150px;
-    background: #fff;
+    background: #f8f9fa;
     color: #333;
     padding: 20px;
     margin: 20px 0;
-    outline: none;
-    border-radius: 5px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.input-box img{
-    width: 25px;
+.input-box img {
+    width: 20px;
     position: absolute;
     bottom: 15px;
     right: 15px;
     cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.input-box img:hover {
+    transform: scale(1.1);
+}
+
+/* Tablet Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 15px;
+    }
+
+    .container h1 {
+        font-size: 1.8rem;
+    }
+
+    .container button {
+        font-size: 0.9rem;
+        padding: 10px 16px;
+    }
+
+    .input-box {
+        padding: 18px;
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .container h1 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .container h1 img {
+        width: 40px;
+        margin-right: 8px;
+    }
+
+    .container button {
+        font-size: 0.85rem;
+        padding: 8px 14px;
+    }
+
+    .input-box {
+        padding: 15px;
+        margin: 15px 0;
+    }
+
+    .input-box img {
+        width: 18px;
+        bottom: 12px;
+        right: 12px;
+    }
 }
